@@ -1,6 +1,6 @@
-Sure! Here’s the content formatted in Markdown, preserving all the original details without cutting anything:
 
-```markdown
+
+
 # Retrieval-Augmented Generation (RAG) System
 
 ## PDF Selection Rationale
