@@ -89,18 +89,6 @@ Sure! Here are the detailed implementation specifics for your Retrieval-Augmente
       main()
   ```
 
-## Usage Instructions
-
-1. **Prepare Documents**: Place relevant documents (e.g., PDFs or text files) in the `./data` directory. These documents should contain information related to the queries you expect users to ask.
-
-2. **Run the Script**:  
-   Execute the script using Python:
-   ```bash
-   python your_script_name.py
-   ```
-
-3. **Interact with the System**:  
-   Once the script is running, you can enter questions related to the content of the documents. Type your question and press Enter. To exit, type `quit`.
 
 ### Additional Considerations
 
