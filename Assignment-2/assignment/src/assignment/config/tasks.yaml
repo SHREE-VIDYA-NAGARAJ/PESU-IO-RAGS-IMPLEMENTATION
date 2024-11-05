@@ -1,0 +1,16 @@
+information_gathering_task:
+  description: >
+    Conduct comprehensive research on available government services that senior citizens can benefit from based on their situation.
+    Ensure that the research reflects the current year of 2024, including any updates or new services.
+  expected_output: >
+    A list with 10 bullet points summarizing the most relevant government services and any key eligibility details.
+  agent: search_agent
+
+information_analysis_task:
+  description: >
+    Review the collected research data and expand each point into detailed sections with actionable insights.
+    Ensure the report provides clear and thorough information tailored for senior citizens and includes any useful context.
+  expected_output: >
+    A full report formatted as markdown with comprehensive sections detailing each government service, its benefits, and how to access it.
+  agent: analysis_agent
+
