@@ -1,54 +1,117 @@
-# Assignment Crew
+# Government Services Chatbot for Senior Citizens
 
-Welcome to the Assignment Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+This project is an AI-powered chatbot designed to provide senior citizens in India with accurate and up-to-date information about government services. The chatbot utilizes CrewAI agents to conduct web research and analyze relevant information to assist elderly users in finding services suited to their needs.
+
+## Features
+
+- **Automated Research**: Gathers the latest information from official government sources.
+- **Information Analysis**: Extracts and summarizes relevant details about available services.
+- **User-Friendly Output**: Generates reports in a structured markdown format for easy readability.
+
+## Project Structure
+
+```
+project_root/
+│-- assignment/
+│   │-- crew.py         # Defines the CrewAI workflow and agents
+│   │-- agents.yaml     # Configuration for different agents
+│   │-- tasks.yaml      # Configuration for task definitions
+│-- main.py             # Main entry point to run the chatbot
+│-- README.md           # Project documentation
+```
 
 ## Installation
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+### Prerequisites
 
-First, if you haven't already, install uv:
+Ensure you have the following installed:
 
-```bash
-pip install uv
+- Python 3.8+
+- Pip
+
+### Setup
+
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   cd <project-folder>
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Set the required API key for the search tool in your environment:
+   ```sh
+   export SERPER_API_KEY='your_api_key_here'
+   ```
+
+## Usage
+
+### Running the chatbot
+
+To run the chatbot and process user queries:
+
+```sh
+python main.py run
 ```
 
-Next, navigate to your project directory and install the dependencies:
+### Training the chatbot
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+To train the chatbot with specific inputs:
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/assignment/config/agents.yaml` to define your agents
-- Modify `src/assignment/config/tasks.yaml` to define your tasks
-- Modify `src/assignment/crew.py` to add your own logic, tools and specific args
-- Modify `src/assignment/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+```sh
+python main.py train <iterations> <output_filename>
 ```
 
-This command initializes the assignment Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Example:
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+```sh
+python main.py train 10 training_output.log
+```
 
-## Understanding Your Crew
+### Replaying a previous execution
 
-The assignment Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+To replay the chatbot's execution from a specific task:
 
-## Support
+```sh
+python main.py replay <task_id>
+```
 
-For support, questions, or feedback regarding the Assignment Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+### Testing the chatbot
 
-Let's create wonders together with the power and simplicity of crewAI.
+To test the chatbot's functionality:
+
+```sh
+python main.py test <iterations> <openai_model_name>
+```
+
+Example:
+
+```sh
+python main.py test 5 'gpt-4'
+```
+
+## Configuration
+
+The behavior of agents and tasks is configured through `agents.yaml` and `tasks.yaml`. You can modify these files to customize the chatbot’s workflow.
+
+### Agents
+
+- **Search Agent**: Responsible for researching government services.
+- **Analysis Agent**: Processes and synthesizes the collected information.
+
+### Tasks
+
+- **Information Gathering Task**: Collects government service details for senior citizens.
+- **Information Analysis Task**: Structures and refines collected data into a comprehensive report.
+
+## Output
+
+The chatbot generates:
+
+- A **list of relevant government services** with eligibility details.
+- A **comprehensive markdown report** (`government_services_report.md`).
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests to enhance the chatbot's functionality 
