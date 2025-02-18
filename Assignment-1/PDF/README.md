@@ -1,7 +1,7 @@
 
 
 
-# Retrieval-Augmented Generation (RAG) System
+# Retrieval-Augmented Generation (RAG) System demostration by using a PDF to make the knowledge base
 
 ## PDF Selection Rationale
 
