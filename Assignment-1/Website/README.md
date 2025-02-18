@@ -1,7 +1,7 @@
 
 
 
-# Retrieval-Augmented Generation (RAG) System
+# Retrieval-Augmented Generation (RAG) System demonstration by using web scraped data to make the knowledge base
 
 ## Website Selection Rationale
 
