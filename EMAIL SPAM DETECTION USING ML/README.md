@@ -38,14 +38,11 @@ The **Random Forest** model achieved the highest accuracy but showed signs of **
 - **Feature engineering** (e.g., Word2Vec, BERT embeddings)
 - **Deep Learning approaches** (e.g., LSTM, Transformer-based models)
 
-## License
-This project is open-source and available under the **MIT License**.
+
 
 ## Contributing
 Feel free to open an issue or submit a pull request if you want to improve this project.
 
----
 
-🚀 **Happy Coding!**
 
 
